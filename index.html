@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://tympanus.net/Development/FullscreenLayoutPageTransitions/ -->
+<html lang="en" class=" js no-touch cssanimations csstransitions">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Fullscreen Layout with Page Transitions</title>
+	<meta name="description" content="Fullscreen Layout with Page Transitions">
+	<meta name="keywords" content="fullscreen layout, boxes, responsive, page transitions, css transitions, jquery, portfolio, template">
+	<link rel="shortcut icon" href="https://tympanus.net/Development/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./dist/css/component.css">
+	<link rel="stylesheet" type="text/css" href="./dist/css/font-awesome.css">	
+	<link rel="stylesheet" type="text/css" href="./static/css/main.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	<script type="text/javascript" src="./static/js/ga.js"></script>
+	<script src="http://code.highcharts.com/maps/highmaps.js"></script>
+	<script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
+	<script src="static/data/pe-all.js"></script>
+	<script src="static/js/map.js"></script>
+	<script src="static/js/modernizr.custom.js"></script>
+</head>
+	<body>
+		<div class="la-republica valign-wrapper">
+			<a href="http://larepublica.pe/"><img class="valign" src="static/images/logo_lr.png" alt=""></a>
+		</div>
+		<nav>
+		    <div class="nav-wrapper">
+		     <!--  <a href="#" class="brand-logo">Logo</a> -->
+		     <div class="row">
+		     	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></a>
+			      <ul id="nav-mobile" class="right hide-on-med-and-down">
+				     <div class="col s6 m5 l4">
+							<a href="#section-page" class="left fadeInDown" id="first-child"><li>Alertas</li></a>
+							<a href="http://larepublica.pe/tag/ayuda-damnificados-huaicos" target="_blank" class="fadeInDown" ><li class="fadeInDown" id="second-child">¿Cómo ayudar?</li></a>
+					</div>
+					<div class="col s6 offset-m2 m5 offset-l4 l4">
+							<a href="http://larepublica.pe/tag/huaicos-en-peru" target="_blank"><li class="fadeInDown" id="third-child">Información</li></a>
+							<a href="#section-page" class="right fadeInDown" id="fourth-child"><li>Videos</li></a>
+					</div>
+			      </ul>
+		     </div>		      
+		      <ul class="side-nav" id="mobile-demo">
+		      		<a href="#section-page"><li style="background-color: #d14747">Alertas</li></a>
+					<a href="http://larepublica.pe/tag/ayuda-damnificados-huaicos" target="_blank"><li style="background-color: #d86262">¿Cómo ayudar?</li></a>
+					<a href="http://larepublica.pe/tag/huaicos-en-peru" target="_blank"><li style="background-color: #e07e7e">Información</li></a>
+					<a href="#section-page"><li style="background-color: #e79999">Videos</li></a>
+					<div class="la-republica valign-wrapper" style="position: absolute;bottom: 0%;width: 100%;">
+						<a href="http://larepublica.pe/"><img class="valign" src="static/images/logo_lr.png" alt="" style="margin: 5% 0;"></a>
+					</div>
+      		  </ul>
+		    </div>
+  		</nav>
+		<!-- <ul id="navlist" class="row">
+			<div class="col s6 m5 l4">
+					<a href=""><li style="background-color: #d14747">Alertas</li></a>
+					<a href=""><li style="background-color: #d86262">¿Cómo ayudar?</li></a>
+			</div>
+			<div class="col s6 offset-m2 m5 offset-l4 l4">
+					<a href=""><li style="background-color: #e07e7e">Información</li></a>
+					<a href=""><li style="background-color: #e79999">Videos</li></a>
+			</div>
+		</ul> -->
+		<div class="container">			
+			<h1 class="center-align" style="margin-bottom: 0">Dale una mano al Perú</h1>
+			<h5 class="center-align" style="margin-top: 0.32rem;">#UnaSolaFuerza</h5>
+			<span class="social-bar-lr">
+					<span class="fb-icon" href="https://www.facebook.com/sharer/sharer.php?u=http://ojo-publico.com/402/caso-lava-jato-detienen-exjefe-de-ositran-durante-el-gobierno-aprista"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
+					<span class="tw-icon" href="https://twitter.com/share?text=Jorge Barata: Exjefe del Ositran en el segundo gobierno aprista recibió US$780 mil de Odebrecht" data-via="Ojo_Publico"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></span>					
+					<span class="ws-icon" href="http://ojo-publico.com/ojopublico/suscribete.html"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></span>
+			</span>
+			<div class="row">
+				<div class="col s12 m6 valign-wrapper" id="box_description">
+					<div class="valign">
+						<p class="black-text"><span class="bigger">E</span>l Perú atraviesa uno de los fenómenos más destructivos de los últimos treinta años.</p> 
+						<p>“El niño costero”, es la amenaza nacional provocada por el calentamiento del mar que ha causado fuertes lluvias, incremento de los caudales en los ríos y huaicos. Una situación que hasta el momento ha dejado a más de 72 mil personas damnificadas en el norte, centro y sur del Perú.</p> 						
+					</div>					
+				</div>
+				<div class="col s12 m6 pr pd-0">									
+					<div id="container">						
+					</div>			
+					<small style="position: absolute;top: 88%;left: 8%;font-size: 14px;">Cifras de damnificados: </small>			
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid" id="section-page">	
+			<div id="bl-main" class="bl-main">
+				<section>
+					<div class="bl-box">
+						<div><h2><i class="fa fa-bell fa-3x" aria-hidden="true"></i>Alertas climáticas</h2></div>
+					</div>
+					<div class="bl-content" style="overflow: auto !important;top: 80px;">
+						<div class="">
+							<h2>Alertas climáticas</h2>
+							<p>Las circunstancias que atraviesa nuestro país nos demuestra que, una vez más, la poca preparación con la que nos enfrentamos a desastres naturales de gran magnitud. </p> 
+							<p>Por ello, <a href="" style="color:#C00101">La República</a>, compartirá con ustedes cada reporte del Senamhi, con respecto a las lluvias, para así poder estar prevenidos ante cualquier suceso. </p>						
+							<div class="row mt-rd">
+								<div class="col s12 m5 pr prm">
+									<a href="https://www.facebook.com/larepublicape/videos/10154578820182017/" target="_blank"><img style="width: 100%;" src="https://scontent.flim5-1.fna.fbcdn.net/v/t15.0-10/17390877_10154578837872017_8013346850398535680_n.jpg?oh=aa5ce0c274030742e0fcabd3b88eb56d&oe=5967684A" alt="">
+									<i class="_1jto _bsl _3htz" id="u_0_s"></i></a>
+								</div>
+								<div class="col s12 offset-m1 m6 description_alerts">
+									<h4>Riesgo extremo para la región norte</h4>
+									<p><b>Pronóstico: </b> 20/03/2016</p>
+									 <p><b>Fuente: </b> Senamhi</p>   
+									 <p class="hide-on-med-only"><b>Descripción: </b>Cajamarca, Tumbes, Piura, Lambayeque y La Libertad, con probabilidad muy alta de que se registre lluvias de moderada a fuerte intensidad, descargas eléctricas y ráfagas de viento. </p>  
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s12 m5 pr prm">
+									<a href="https://www.facebook.com/larepublicape/videos/10154568677967017/" target="_blank"><img style="width: 100%;" src="https://scontent.flim5-1.fna.fbcdn.net/v/t15.0-10/17335285_10154568699542017_778657002166419456_n.jpg?oh=5d3a7e37f18858be021c55702578b46f&oe=595E15FD" alt="">
+									<i class="_1jto _bsl _3htz" id="u_0_s"></i></a>
+								</div>
+								<div class="col s12 offset-m1 m6 description_alerts">
+									<h4>Tormentas eléctricas en la sierra central y norte</h4>
+									<p><b>Pronóstico: </b> 16/03/2016</p>
+									 <p><b>Fuente: </b> Senamhi</p>   
+									 <p class="hide-on-med-only"><b>Descripción: </b>El Senamhi también instó a que se tomen las precauciones del caso, pues "se están activando las quebradas en todos los departamentos". </p> 
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s12 m5 pr prm">
+									<a href="https://www.facebook.com/larepublicape/videos/10154566862177017/" target="_blank"><img style="width: 100%;" src="https://scontent.flim5-1.fna.fbcdn.net/v/t15.0-10/p526x395/17308643_10154566870892017_8683690846148624384_n.jpg?oh=b29c169fd1de2882460d00dfe1d12f2e&oe=595F510E" alt="">
+									<i class="_1jto _bsl _3htz" id="u_0_s"></i></a>
+									<!-- <i class="fa fa-play-circle-o" aria-hidden="true"></i> -->
+									
+								</div>
+								<div class="col s12 offset-m1 m6 description_alerts">
+									<h4>Lluvias fuertes para la sierra sur</h4>
+									<p><b>Pronóstico: </b> 16/03/2016</p>
+									 <p><b>Fuente: </b> Senamhi</p>   
+									 <p class="hide-on-med-only"><b>Descripción: </b> Las zonas afectadas serán principalmente: Lima, Pasco, Junín, Huancavelica, Ayacucho, Arequipa, Apurímac, Cusco, Puno, Moquegua y Tacna. </p> 
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s12 m5 pr prm">
+									<a href="https://www.facebook.com/larepublicape/videos/10154561170627017/" target="_blank"><img style="width: 100%;" src="https://scontent.flim5-1.fna.fbcdn.net/v/t15.0-10/p526x395/17267091_10154561174822017_4371834110948147200_n.jpg?oh=6217c3726b52a6545b63d86d6ef3d745&oe=5929A20B" alt="">
+									<i class="_1jto _bsl _3htz" id="u_0_s"></i></a>
+									<!-- <i class="fa fa-play-circle-o" aria-hidden="true"></i> -->
+									
+								</div>
+								<div class="col s12 offset-m1 m6 description_alerts">
+									<h4>Riesgo extremo para la región norte</h4>
+									<p><b>Pronóstico: </b> 13/03/2016</p>
+									 <p><b>Fuente: </b> Senamhi</p>   
+									 <p class="hide-on-med-only"><b>Descripción: </b>Precipitaciones acompañadas de descargas eléctricas estarán presentes hasta las 00:00 horas de hoy en Tumbes, Piura y Lambayeque. </p> 
+								</div>
+							</div>
+						</div>						
+					</div>
+					<span class="bl-icon bl-icon-close pulse"></span>
+				</section>
+				<section>
+					<div class="bl-box">
+						<div class="">
+							<h2><i class="fa fa-play fa-3x" aria-hidden="true"></i>Videos y fotos</h2>
+						</div>
+					</div>
+					<div class="bl-content">
+						<h2>Videos y fotos</h2>
+						  <div class="row">
+							    <div class="col s12">
+							      <ul class="tabs">
+							        <li class="tab col s3"><a href="#test1">Test 1</a></li>
+							        <li class="tab col s3"><a href="#test2">Test 2</a></li>
+							        <li class="tab col s3 disabled"><a href="#test3">Disabled Tab</a></li>
+							        <li class="tab col s3"><a href="#test4">Test 4</a></li>
+							      </ul>
+							    </div>
+							    <div id="test1" class="col s12">Test 1</div>
+							    <div id="test2" class="col s12">Test 2</div>
+							    <div id="test3" class="col s12">Test 3</div>
+							    <div id="test4" class="col s12">Test 4</div>
+  							</div>
+					</div>
+					<span class="bl-icon bl-icon-close pulse"></span>
+				</section>
+				<small class="credits"><a href="mailto:genesis.leon@glr.pe"><i class="fa fa-file-code-o" aria-hidden="true" style="display: inline-block;margin: 0"></i><em style="margin-left: 7px;">Desarrollo web: Génesis León</em></a></small>	
+			</div> 			
+		</div><!-- /container -->			
+		<script src="static/js/boxlayout.js"></script>
+		<!-- <script src="static/js/dragscroll.js"></script> -->
+		<script src="static/js/main.js"></script>
+<!-- 		<script>
+			$(function() {
+				
+			});
+		</script> -->
+		<script>
+			$(document).ready(function(){
+			  $('ul.tabs').tabs();
+			  $('ul.tabs').tabs('select_tab', 'tab_id');
+			  Boxlayout.init();
+			});
+		</script>
+</body>
+</html>
